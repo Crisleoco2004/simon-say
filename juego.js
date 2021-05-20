@@ -2,42 +2,41 @@ const celeste = document.getElementById('celeste')
 const violeta = document.getElementById('violeta')
 const naranja = document.getElementById('naranja')
 const verde = document.getElementById('verde')
-const btnEmpezar = document.getElementById('btnEmpezar')
+const btnEmpezar=document.getElementById('btnEmpezar')
 
-class Juego {
-    constructor() {
+class Juego{
+    constructor(){
         this.inicializar()
         this.generarSecuencia()
         this.siguienteNivel()
-    }
-
-    inicializar() {
+    } 
+    
+    inicializar(){     
         btnEmpezar.classList.add('opacity')
         setTimeout(() => {
             btnEmpezar.classList.add('hide');
             console.log('Oculto')
-        }, 500) 
-        this.nivel = 7
+        }, 200) 
+        this.nivel = 1 
         this.colores = {
-            celeste,
-            violeta, 
-            naranja, 
+            celeste, 
+            violeta,
+            naranja,
             verde
-        }
+        }    
+    }  
+
+    generarSecuencia(){
+        this.secuencia = new Array(10).fill(0).map(n => Math.floor(Math.random()*4))
     }
 
-    generarSecuencia() {
-        this.secuencia = new Array(10).fill(0).map(n => Math.floor(Math.random() * 4))
-    }
-
-    siguienteNivel() {
+    siguienteNivel(){
         this.iluminarSecuencia()
     }
 
-    transformarNumeroAColor(numero) {
-
-        switch (numero) {
-            case 0:
+    transformarNumeroAColor(numero){
+        switch (numero){
+            case 0: 
                 return 'celeste'
             case 1:
                 return 'violeta'
@@ -46,28 +45,25 @@ class Juego {
             case 3:
                 return 'verde'
         }
-
     }
 
-    iluminarSecuencia() {
-        for(let i = 0; i < this.nivel; i++){
-            var color = this.transformarNumeroAColor(this.secuencia[i])
-            setTimeout(()=> this.iluminarColor(color), 1000 * i)
+    iluminarSecuencia(){ // let mantiene la variable a diferencia de var que siempre pisa la misma variable, usar siempre conts antes que let y usar siepre let antes de var.
+        for (let i = 0; i < this.nivel; i++){
+            const color = this.transformarNumeroAColor(this.secuencia[i]) 
+            setTimeout(() => this.iluminarColor(color), 1000*i)
         }
     }
 
-    iluminarColor() {
+    iluminarColor(color){
         this.colores[color].classList.add('light')
         setTimeout(() => this.apagarColor(color), 350)
     }
-    
+
     apagarColor(color){
         this.colores[color].classList.remove('light')
     }
-}
+}    
 
-function empezarJuego() {
+function empezarJuego(){    
     window.juego = new Juego()
-}
-
-
+}   
