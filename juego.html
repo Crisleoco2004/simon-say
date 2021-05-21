@@ -6,18 +6,25 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Document</title>
         <link rel="stylesheet" href="./juego.css">
+        <link id="css-hover" rel="stylesheet" >
     </head>
 
     <body>
+        <div class="button-container">
+            <button id="btnEmpezar" class="btn-start" onclick="empezarJuego()">Empezar a jugar!</button>
+        </div>
         <div class="gameboard">
             <div id="celeste" class="color celeste left" data-color="celeste"></div>
             <div id="violeta" class="color violeta right" data-color="violeta"></div>
             <div id="naranja" class="color naranja left" data-color="naranja"></div>
             <div id="verde" class="color verde right" data-color="verde"></div>
-            <div class="button-container">
-                <button id="btnEmpezar" class="btn-start" onclick="empezarJuego()">Empezar a jugar!</button>
-            </div>
         </div>
+        <span id="green">Green</span>
+        <span id="blue">Blue</span>
+        <span id="pink">Pink</span>
+        <span id="orange">Orange</span>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"></script>
         <script src="./juego.js"></script>
     </body>
 </html>

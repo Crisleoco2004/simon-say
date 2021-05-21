@@ -12,6 +12,7 @@ body {
     display: grid;
     place-content: center;
     height: 100%;
+    font-family: sans-serif;
 }
 
 .gameboard {
@@ -22,40 +23,46 @@ body {
     height: 300px;
     border-radius: 50%;
     overflow: hidden;
+    transition: display 1s
+
 }
 
-.gameboard div:not(:last-child) {
+.gameboard div{
     width: 50%;
     height: 50%;
+    transition: .5s
 }
 
 .celeste {
-    background: #22a6b3;
+    background-color: #22a6b3;
 }
 
 .celeste.light {
-    background: #7ed6df;
+    background-color: #7ed6df;
 }
 
 .violeta {
-    background: #be2edd;
+    background-color: #d32df8;
 }
 
+
 .violeta.light {
-    background: #e056fd;
+    background-color: #e056fd;
 }
 
 .naranja {
-    background: #f0932b;
+    background-color: #f0932b;
 }
 
+
 .naranja.light {
-    background: #ffbe76;
+    background-color: #ffbe76;
 }
 
 .verde {
-    background: #6ab04c;
+    background-color: #6ab04c;
 }
+
 
 .verde.light {
     background: #badc58;
@@ -64,12 +71,7 @@ body {
 .button-container {
     display: grid;
     place-content: center;
-    position: absolute;
-    width: 80%;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%)
-
+    margin-bottom: 10px;
 }
 
 .btn-start {
@@ -101,3 +103,34 @@ body {
 .opacity {
     opacity: .1;
 }
+
+span {
+    position: absolute;
+    top: calc( 50% + 200px);
+    left: calc( 50% - 60px);
+    width: 100px;
+    padding: 10px;
+    display: none;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+}
+
+.green {
+    background-color: #6ab04c;
+    display: inline-block;
+}
+.pink {
+    background-color: #d32df8;
+    display: inline-block;
+}
+.orange {
+    background-color: #f0932b;
+    display: inline-block;
+}
+.blue {
+    background-color: #22a6b3;
+    display: inline-block;
+}
+
+
