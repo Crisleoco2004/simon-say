@@ -10,8 +10,8 @@ const violetaText = document.getElementById('pink')
 const verdeText = document.getElementById('green')
 const naranjaText = document.getElementById('orange')
 
-
 class Juego{
+
     constructor(){
         this.inicializar()
         this.generarSecuencia()

@@ -104,7 +104,7 @@ body {
     opacity: .1;
 }
 
-span {
+.subtitle {
     position: absolute;
     top: calc( 50% + 200px);
     left: calc( 50% - 60px);

@@ -1,0 +1,20 @@
+.celeste:hover {
+    background-color: #1a808a;
+    cursor: pointer
+}
+.violeta:hover {
+    background-color: #9b26b6;
+    cursor: pointer
+}
+.naranja:hover {
+    background-color: #ca7d24;
+    cursor: pointer
+}
+.verde:hover {
+    background-color: #4c8036;
+    cursor: pointer
+}
+
+.gameboard div:active {
+    background-color: rgb(255, 255, 255);
+}
